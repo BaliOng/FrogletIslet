@@ -12,6 +12,7 @@ TagManager:
   - giant frog
   - siren frog
   - storm frog
+  - minigameFrog
   layers:
   - Default
   - TransparentFX

@@ -16,6 +16,11 @@ public class FrogManager : MonoBehaviour
     public GameObject fishingRod;
     public GameObject glowingPlant;
     public GameObject potion;
+    public GameObject pond;
+
+    public GameObject plants;
+    public GameObject rain;
+    public GameObject noOptions;
 
     public Sprite tomato;
     public Sprite tomatoHidden;
@@ -27,12 +32,14 @@ public class FrogManager : MonoBehaviour
     public Sprite sirenHidden;
     public Sprite crystal;
     public Sprite crystalHidden;
+    public Sprite pondUnlocked;
 
     private SpriteRenderer TspriteRenderer; 
     private SpriteRenderer StspriteRenderer; 
     private SpriteRenderer MspriteRenderer; 
     private SpriteRenderer SspriteRenderer; 
     private SpriteRenderer CspriteRenderer; 
+    private SpriteRenderer PspriteRenderer; 
 
     void Start()
     {
@@ -41,6 +48,7 @@ public class FrogManager : MonoBehaviour
         MspriteRenderer = monsterFrog.GetComponent<SpriteRenderer>();
         SspriteRenderer = sirenFrog.GetComponent<SpriteRenderer>();
         CspriteRenderer = crystalFrog.GetComponent<SpriteRenderer>();
+        PspriteRenderer = pond.GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -49,6 +57,8 @@ public class FrogManager : MonoBehaviour
         if (StaticVariables.unlockedTomato == true)
         {
             TspriteRenderer.sprite = tomato;
+            noOptions.SetActive(false);
+            plants.SetActive(true);
             food.SetActive(true);
         }
         else
@@ -58,8 +68,11 @@ public class FrogManager : MonoBehaviour
         }
         
         
-        if (StaticVariables.unlockedStorm == true)
+        if (StaticVariables.unlockedStorm == true) 
+        {
+            rain.SetActive(true);
             StspriteRenderer.sprite = storm;
+        }
         else
             StspriteRenderer.sprite = stormHidden;
 
@@ -91,6 +104,7 @@ public class FrogManager : MonoBehaviour
        if (StaticVariables.unlockedCrystal == true)
        {
           CspriteRenderer.sprite = crystal;
+          PspriteRenderer.sprite = pondUnlocked;
           potion.SetActive(true);
        }
        else

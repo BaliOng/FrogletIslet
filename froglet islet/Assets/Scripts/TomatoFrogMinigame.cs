@@ -42,6 +42,7 @@ public class TomatoFrogMinigame : MonoBehaviour
         buttons.SetActive(true);
     }
 
+
     public void OnTonePointerClick(int digit) {
          input[0] = input[1];
          input[1] = input[2];

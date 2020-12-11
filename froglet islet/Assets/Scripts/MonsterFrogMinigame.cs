@@ -11,6 +11,7 @@ public class MonsterFrogMinigame : MonoBehaviour
     public GameObject backButton;
     public GameObject play;
     public GameObject hint;
+    public GameObject animationHolder;
     bool completed = false;
 
     int[] solution = new int[6];
@@ -43,6 +44,7 @@ public class MonsterFrogMinigame : MonoBehaviour
                 SpriteRenderer.sprite = revealedFrog;
                 play.SetActive(true);
                 hint.SetActive(false);
+                animationHolder.SetActive(true);
             }
         if (completed == true)
         {

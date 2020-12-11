@@ -22,7 +22,7 @@ public class FrogClicker : MonoBehaviour
 
             case "storm frog":
                 if (StaticVariables.unlockedStorm == false)
-                     SceneManager.LoadScene("StormFrog");
+                     SceneManager.LoadScene("StormBringerFrog");
                 Debug.Log("storm frog clicked");
                 break;
 

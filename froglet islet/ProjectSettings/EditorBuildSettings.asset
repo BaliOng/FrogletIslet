@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MenuScene.unity
+    guid: 9e00fa88834484a48bcdc3ef1fb7a662
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/TomatoFrog.unity
+    guid: dbd47f5e034573c49b566b7abd628713
+  - enabled: 1
+    path: Assets/Scenes/StormBringerFrog.unity
+    guid: 344bde37ff56df44386e190b224151ba
+  - enabled: 1
+    path: Assets/Scenes/MonsterFrog.unity
+    guid: 5babc2f3a64c49f4da1cf408cced2038
+  - enabled: 1
+    path: Assets/Scenes/SirenFrog.unity
+    guid: 24fc8005d3350bb489a3ade4dcfc914d
+  - enabled: 1
+    path: Assets/Scenes/CrystalFrog.unity
+    guid: 52bbf91c549866e468fdb44ca8e352a4
   m_configObjects: {}

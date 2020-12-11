@@ -13,6 +13,7 @@ public class StormFrogMinigame : MonoBehaviour
     public GameObject play;
     public GameObject hint;
     public GameObject hintButton;
+    public GameObject animationHolder;
     bool foodUsed;
     bool completed = false;
 
@@ -76,6 +77,7 @@ public class StormFrogMinigame : MonoBehaviour
     {
        SpriteRenderer.sprite = revealedFrog;
        foodUsed = true;
+       animationHolder.SetActive(true);
     }
 
     public void OnHintClick()

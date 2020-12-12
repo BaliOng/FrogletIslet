@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class FrogClicker : MonoBehaviour
 {
+    public GameObject endWindow;    
 
     void OnMouseDown() 
     {
@@ -42,6 +43,12 @@ public class FrogClicker : MonoBehaviour
                 if (StaticVariables.unlockedCrystal == false)
                      SceneManager.LoadScene("CrystalFrog");
                 Debug.Log("crystal frog clicked");
+                break;
+
+            case "pond":
+                if (StaticVariables.unlockedCrystal == true)
+                     endWindow.SetActive(true);
+                Debug.Log("pond clicked");
                 break;
         }
        }

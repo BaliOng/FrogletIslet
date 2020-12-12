@@ -17,6 +17,7 @@ public class FrogManager : MonoBehaviour
     public GameObject glowingPlant;
     public GameObject potion;
     public GameObject pond;
+    public GameObject rainOverlay;
 
     public GameObject plants;
     public GameObject rain;
@@ -112,6 +113,11 @@ public class FrogManager : MonoBehaviour
           CspriteRenderer.sprite = crystalHidden;
           potion.SetActive(false);
        }
+
+       if (StaticVariables.raining == true)
+            rainOverlay.SetActive(true);
+        else
+             rainOverlay.SetActive(false);
         
     }
 }

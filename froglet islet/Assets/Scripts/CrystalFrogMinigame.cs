@@ -56,7 +56,7 @@ public class CrystalFrogMinigame : MonoBehaviour
             backButton.SetActive(false);
             completedWindow.SetActive(true);
             buttons.SetActive(false);
-            StaticVariables.unlockedSiren = true;
+            StaticVariables.unlockedCrystal = true;
         }
     }
 

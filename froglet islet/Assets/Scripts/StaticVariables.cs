@@ -10,6 +10,7 @@ public class StaticVariables : MonoBehaviour
     public static bool unlockedSiren = false;
     public static bool unlockedCrystal = false;
     public static bool raining = false;
+    public static bool canBreed = false;
     public static int plant = 1;
     
 }

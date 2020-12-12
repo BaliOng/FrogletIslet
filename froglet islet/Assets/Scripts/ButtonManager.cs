@@ -5,31 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
-    public void OnPressCustomize(GameObject CustomizeCanvas)
+
+    public void OnOpenCanvas(GameObject canvas)
     {
-        CustomizeCanvas.SetActive(true);
-        Debug.Log("Customizer clicked.");
+        canvas.SetActive(true);
+        Debug.Log("Opened.");
             
     }
 
-    public void OnPressJournal(GameObject JournalCanvas)
+    public void OnCloseCanvas(GameObject canvas)
     {
-        JournalCanvas.SetActive(true);
-        Debug.Log("Journal clicked.");
-            
-    }
-
-    public void OnCloseCustomize(GameObject CustomizeCanvas)
-    {
-        CustomizeCanvas.SetActive(false);
-        Debug.Log("Customizer closed.");
-            
-    }
-
-    public void OnCloseJournal(GameObject JournalCanvas)
-    {
-        JournalCanvas.SetActive(false);
-        Debug.Log("Journal closed.");
+        canvas.SetActive(false);
+        Debug.Log("Closed.");
             
     }
 
@@ -57,7 +44,7 @@ public class ButtonManager : MonoBehaviour
 
     public void OnStart()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("IntroScene");
         Debug.Log("Start");
     }
 
@@ -71,5 +58,17 @@ public class ButtonManager : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("quit");
+    }
+    public void Restart()
+    {
+        StaticVariables.unlockedTomato = false;
+        StaticVariables.unlockedStorm = false;
+        StaticVariables.unlockedMonster = false;
+        StaticVariables.unlockedSiren = false;
+        StaticVariables.unlockedCrystal = false;
+        StaticVariables.raining = false;
+        StaticVariables.plant = 1;
+        SceneManager.LoadScene("MenuScene");
+        Debug.Log("restart");
     }
 }

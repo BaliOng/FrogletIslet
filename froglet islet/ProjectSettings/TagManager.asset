@@ -13,6 +13,7 @@ TagManager:
   - siren frog
   - storm frog
   - minigameFrog
+  - pond
   layers:
   - Default
   - TransparentFX

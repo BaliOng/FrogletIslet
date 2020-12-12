@@ -8,10 +8,12 @@ public class ButtonSounds : MonoBehaviour
      public AudioClip sfx2;
      public AudioClip sfx3;
      public AudioClip sfx4;
-     public AudioClip sfx5;
      public AudioSource sfxPlayer;
 
-     
+     void Start()
+     {
+          GetComponent<AudioSource>().time = GetComponent<AudioSource>().clip.length * .5f;
+     }
     public void OnClick(int buttonNum)
     {
         switch(buttonNum)
@@ -27,9 +29,6 @@ public class ButtonSounds : MonoBehaviour
                 break;
             case 4:
                 sfxPlayer.PlayOneShot(sfx4, 1f);
-                break;
-            case 5:
-                sfxPlayer.PlayOneShot(sfx5, 1f);
                 break;
         }
     }
